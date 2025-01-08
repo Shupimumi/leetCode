@@ -1,7 +1,10 @@
 package com.company.palindromeNumber;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
+
+/**
+ * Given an integer num, return true if num is a palindrome, and false otherwise.
+ **/
 
 public class PalindromeNumber {
     public static void main(String[] args) {
@@ -14,7 +17,7 @@ public class PalindromeNumber {
 
         if (num < 0) {
             return isPalindrome;
-        }else {
+        } else {
             ArrayList<Integer> array = new ArrayList<>();
             do {
                 array.add(num % 10);
