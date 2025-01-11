@@ -3,8 +3,8 @@ package com.company.majorityElement;
 public class MajorityElement {
     public static void main(String[] args) {
         int[] nums = new int[]{3, 2, 3};
-        int test = majorityElement(nums);
-        System.out.println(test);
+        System.out.println(majorityElement(nums));
+        System.out.println(bestSolution(nums));
     }
 
 
@@ -25,5 +25,20 @@ public class MajorityElement {
         }
 
         return result;
+    }
+
+    public static int bestSolution(int[] nums) {
+        int res = 0;
+        int majority = 0;
+
+        for (int n : nums) {
+            if (majority == 0) {
+                res = n;
+            }
+
+            majority += n == res ? 1 : -1;
+        }
+
+        return res;
     }
 }
